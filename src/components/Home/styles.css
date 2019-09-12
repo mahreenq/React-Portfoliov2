@@ -1,0 +1,52 @@
+.nameHomePage {
+  font-family: "Scriptin";
+  font-size: 5rem;
+  text-align: center;
+  line-height: 1em;
+  color: #d0c9bf;
+  text-shadow: 10px 4px #441e36;
+}
+.wdHomePage {
+  font-size: 2em;
+  line-height: 1em;
+  margin: 0;
+  text-shadow: 2px 3px #3d2936;
+  color: #1de9b6;
+  font-family: Raleway;
+  font-weight: 100;
+}
+
+.homePage {
+  /* background-color: #542D48; */
+  background-color: rgba(255, 0, 0, 0);
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.hidePara {
+  display: none;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+  .nameHomePage {
+    font-size: 5rem;
+  }
+  .wdHomePage {
+    font-size: 3em;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .nameHomePage {
+    font-size: 7rem;
+  }
+  .wdHomePage {
+    font-size: 4em;
+  }
+}
+
+.carousel {
+  width: 200px;
+}

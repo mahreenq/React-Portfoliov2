@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110675885-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-110675885-1');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="description" content="I am a web developer enthusiastic about building innovative products. Through various ventures, I discovered a passion for coding (especially in React &amp; React Native), building creative designs and watching them come to life.">
+  <!-- <meta name="keywords" content="mahreen, qureshi, mahreenq, mahreen qureshi, web developer, react, coding, web development, reactjs , wordpress, php, freelance"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <meta name="author" content="Mahreen Qureshi">
+  <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+  <!-- <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico"> -->
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" type="image/x-icon" />
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <script src="https://use.fontawesome.com/3d160053b9.js"></script>
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/88/three.min.js"></script> -->
+
+  <title>Mahreen Qureshi</title>
+  <style>
+    /* canvas {
+       display: none;
+      } */
+
+    canvas {
+      width: 100vw;
+      height: 100vh;
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -9999;
+      pointer-events: none;
+    }
+
+    @media only screen
+    /*DESKTOP */
+
+    and (min-width:1000px) {
+      canvas {
+        /* width: 100vw;
+      height: 100vh;
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -9999;
+      pointer-events: none; */
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <body>
+    <script src="js/tween.min.js"></script>
+    <script src="js/stats.js"></script>
+    <script src="js/three.js"></script>
+
+    <!-- <script src="js/three.js"></script>
+              <script src="js/tween.min.js"></script>
+              <script src="js/Projector.js"></script>
+              <script src="js/CanvasRenderer.js"></script>
+              <script src="js/stats.js"></script>
+       -->
+    <script>
+      var container, stats;
+      var camera, scene, renderer, particle;
+      var mouseX = 0, mouseY = 0;
+      var windowHalfX = window.innerWidth / 2;
+      var windowHalfY = window.innerHeight / 2;
+      init();
+      animate();
+      function init() {
+        container = document.createElement('div');
+        document.body.appendChild(container);
+        camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 5000);
+        camera.position.z = 1500;
+        scene = new THREE.Scene();
+        //scene.background = new THREE.Color( 0x360026 );
+        var material = new THREE.SpriteMaterial({
+          map: new THREE.CanvasTexture(generateSprite()),
+          blending: THREE.AdditiveBlending
+        });
+        for (var i = 0; i < 1000; i++) {
+          particle = new THREE.Sprite(material);
+          initParticle(particle, i * 10);
+          scene.add(particle);
+        }
+        renderer = new THREE.CanvasRenderer();
+        renderer = new THREE.WebGLRenderer({ alpha: true }); // init like this
+        renderer.setClearColor(0xffffff, 0); // second param is opacity, 0 => transparent
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        container.appendChild(renderer.domElement);
+        stats = new Stats();
+        // container.appendChild( stats.dom );
+        document.addEventListener('mousemove', onDocumentMouseMove, false);
+        document.addEventListener('touchstart', onDocumentTouchStart, false);
+        document.addEventListener('touchmove', onDocumentTouchMove, false);
+        //
+        window.addEventListener('resize', onWindowResize, false);
+      }
+      function onWindowResize() {
+        windowHalfX = window.innerWidth / 2;
+        windowHalfY = window.innerHeight / 2;
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      }
+      function generateSprite() {
+        var canvas = document.createElement('canvas');
+        canvas.width = 16;
+        canvas.height = 16;
+
+        var context = canvas.getContext('2d');
+        var gradient = context.createRadialGradient(canvas.width / 2, canvas.height / 2, 0, canvas.width / 2, canvas.height / 2, canvas.width / 2);
+        gradient.addColorStop(0.3, 'rgba(84,45,72,1)');
+        gradient.addColorStop(0.2, 'rgba(102,6,79,0.5');
+        gradient.addColorStop(0.4, 'rgba(84,45,72,0.4)');
+        gradient.addColorStop(1, 'rgba(156,142,156,0)');
+        context.fillStyle = gradient;
+        context.fillRect(0, 0, canvas.width, canvas.height);
+        return canvas;
+      }
+      function initParticle(particle, delay) {
+        var particle = this instanceof THREE.Sprite ? this : particle;
+        var delay = delay !== undefined ? delay : 0;
+        particle.position.set(0, 0, 0);
+        particle.scale.x = particle.scale.y = Math.random() * 30 + 16;
+        new TWEEN.Tween(particle)
+          .delay(delay)
+          .to({}, 10000)
+          .onComplete(initParticle)
+          .start();
+        new TWEEN.Tween(particle.position)
+          .delay(delay)
+          .to({ x: Math.random() * 4000 - 2000, y: Math.random() * 1000 - 500, z: Math.random() * 4000 - 2000 }, 10000)
+          .start();
+        new TWEEN.Tween(particle.scale)
+          .delay(delay)
+          .to({ x: 0.01, y: 0.01 }, 10000)
+          .start();
+      }
+      //
+      function onDocumentMouseMove(event) {
+        mouseX = event.clientX - windowHalfX;
+        mouseY = event.clientY - windowHalfY;
+      }
+      function onDocumentTouchStart(event) {
+        if (event.touches.length == 1) {
+          // event.preventDefault();
+          mouseX = event.touches[0].pageX - windowHalfX;
+          mouseY = event.touches[0].pageY - windowHalfY;
+        }
+      }
+      function onDocumentTouchMove(event) {
+        if (event.touches.length == 1) {
+          // event.preventDefault();
+          mouseX = event.touches[0].pageX - windowHalfX;
+          mouseY = event.touches[0].pageY - windowHalfY;
+        }
+      }
+      //
+      function animate() {
+        requestAnimationFrame(animate);
+        render();
+        stats.update();
+      }
+      function render() {
+        TWEEN.update();
+        camera.position.x += (mouseX - camera.position.x) * 0.05;
+        camera.position.y += (- mouseY - camera.position.y) * 0.05;
+        camera.lookAt(scene.position);
+        renderer.render(scene, camera);
+      }
+    </script>
+
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+
+</html>

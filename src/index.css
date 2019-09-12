@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+@font-face {
+  font-family: "Frutilla";
+  src: local("Frutilla"),
+    url(./assets/fonts/Frutilla-Script.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Scriptin";
+  src: local("Scriptin"), url(./assets/fonts/SCRIPTIN.ttf) format("truetype");
+}

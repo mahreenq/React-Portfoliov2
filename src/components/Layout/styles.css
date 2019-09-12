@@ -1,0 +1,74 @@
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+}
+.nav a {
+  text-decoration: none;
+  color: #f1f0f1;
+  font-size: 1.1em;
+}
+
+.nav a:hover {
+  border-bottom: 2px solid rgb(101, 184, 173);
+}
+
+/* .nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: rgb(101, 184, 173);
+    transition: width .8s;
+}
+
+.nav a:hover::after {
+    width: 100%;
+    transition: width .8s;
+} */
+
+.header {
+  height: 10vh;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  font-family: "Raleway", sans-serif;
+}
+
+.footer {
+  min-height: 10vh;
+  background-color: #b8b7b8;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  color: #360026;
+  font-family: "Raleway", sans-serif;
+  margin-top: 5px;
+}
+
+.contactFooter {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.4em;
+  margin: 0;
+}
+
+.contactFooter a {
+  text-decoration: none;
+  color: #360026;
+  margin: 0;
+}
+.contactFooter a p {
+  margin: 0;
+  padding: 5px;
+}
+
+.copyright {
+  margin: 0;
+  margin-bottom: 4px;
+}

@@ -1,0 +1,259 @@
+.singleProject {
+  width: 95%;
+  margin: 0.5rem;
+}
+.boldHeading {
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+.whiteFont {
+  color: #eeeeee !important;
+  font-size: 2rem !important;
+}
+
+.tealFont {
+  color: #1de9b6 !important;
+  font-size: 1.2em !important;
+}
+
+.greyFont {
+  color: #9e9e9e !important;
+  font-size: 0.9rem !important;
+  padding-right: 5px;
+}
+
+.description {
+  font-size: 0.9em !important;
+  font-family:"Raleway" !important;
+  padding: 10px;
+}
+
+.projectImage {
+  width: 30%;
+  border-radius: 10px;
+}
+
+.singlePortfolioImage {
+  height: 50px;
+  background-position: top;
+  background-size: cover;
+  border-radius: 10px;
+  width: 50px;
+  margin: 3px;
+}
+.singlePortfolioImage a {
+  height: 100%;
+  width: 100%;
+}
+
+.portfolioImages {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-around;
+}
+
+.picturePorfolioDiv {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.descPortfolioDiv {
+  width: 100%;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+}
+
+.carousel .thumb.selected,
+.carousel .thumb:hover {
+  border: 3px solid rgb(29, 233, 182) !important;
+}
+
+.thumb {
+  border: 3px solid black !important;
+}
+
+@media only screen /*Mobile Larger */ and (min-width: 375px) and (max-width: 605px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid grey;
+    padding-top: 10px;
+  }
+
+  .rowReverse {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid grey;
+    padding-top: 10px;
+  }
+
+  .singlePortfolioImage {
+    height: 70px;
+    background-position: top;
+    background-size: cover;
+    border-radius: 20px;
+    width: 70px;
+    margin: 3px;
+  }
+
+  .description {
+    font-size: 0.9em !important;
+  }
+}
+
+@media only screen /*Tablet */ and (min-width: 605px) and (max-width: 1200px) {
+  /* .singleProject{
+      width: 45%; 
+    } */
+  .row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid grey;
+    padding-top: 10px;
+  }
+
+  .rowReverse {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid grey;
+    padding-top: 10px;
+  }
+  .portfolioImages {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .picturePorfolioDiv {
+    width: 50%;
+  }
+
+  .singlePortfolioImage {
+    height: 120px;
+    width: 120px;
+  }
+
+  .carouseldiv {
+    width: 40%;
+  }
+}
+
+@media only screen /*DESKTOP */ and (min-width: 1200px) {
+  /* .singleProject {
+          width: 31% ;
+      } */
+  .row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid grey;
+    padding-top: 2em;
+  }
+
+  .rowReverse {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid grey;
+    padding-top: 2em;
+  }
+  .portfolioImages {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .picturePorfolioDiv {
+    width: 50%;
+  }
+
+  .singlePortfolioImage {
+    height: 150px;
+    width: 150px;
+  }
+  .carouseldiv {
+    width: 80%;
+  }
+
+  .description {
+    font-size: 1.4em !important;
+  }
+  .greyFont {
+    color: #9e9e9e !important;
+    font-size: 1.3rem !important;
+  }
+
+  .singleProject {
+    width: 80%;
+  }
+  .projectCard {
+    padding: 2.5em !important;
+  }
+}
+
+@media only screen /*DESKTOP */ and (min-width: 1000px) {
+  /* .singleProject {
+          width: 31% ;
+      } */
+  /* .row {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 2px solid grey;
+        padding-top: 10px;
+    }
+  
+    .rowReverse{
+          display: flex;
+          flex-direction: row-reverse;
+          width: 100%;
+          justify-content: space-between;
+          align-items: center;
+          border-top: 2px solid grey;
+          padding-top: 10px;
+    }
+    .portfolioImages{
+      flex-direction: column; 
+      align-items: center;
+    }
+  
+    .picturePorfolioDiv{
+      width: 50%;
+    }
+  
+    .singlePortfolioImage{
+      height: 150px;
+      width: 150px;
+  }
+  .carouseldiv{
+    width: 80%;
+   }
+
+   .description{
+    font-size: 1.1em !important;
+  } */
+}

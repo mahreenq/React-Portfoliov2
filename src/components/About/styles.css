@@ -1,0 +1,231 @@
+.aboutPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Raleway;
+  flex-direction: column;
+  min-height: 80vh;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.singleToolbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.7em;
+}
+
+.toolboxIcon {
+  padding-bottom: 5px;
+  font-size: 3em;
+}
+
+.aboutCard {
+  background-color: rgba(33, 2, 26, 0.781);
+  width: 100%;
+  border-radius: 25px !important;
+  padding-top: 1.3em;
+  margin-bottom: 2em;
+}
+
+.banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://preview.ibb.co/iX4oHw/phonemac.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 400px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: Raleway;
+  font-size: 1.2em;
+  margin-bottom: 2em;
+}
+
+.aboutPicture {
+  background: url("https://image.ibb.co/hgCTjb/thumbnail_IMG_3126.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 80%;
+  height: 200px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: Raleway;
+  font-size: 1.2em;
+  margin-bottom: 2em;
+  border-radius: 140px;
+}
+
+.aboutPic {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+@media only screen and (min-width: 370px) and (max-width: 400px) {
+  .aboutPicture {
+    height: 225px;
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 450px) {
+  .aboutPicture {
+    height: 250px;
+    border-radius: 150px;
+  }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 600px) {
+  .aboutPicture {
+    height: 250px;
+    border-radius: 150px;
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 860px) {
+  .aboutPage {
+    margin: 0;
+  }
+  .aboutCard {
+    width: 90% !important;
+    display: flex;
+  }
+  .aboutPic {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+  .aboutPicture {
+    height: 230px;
+    width: 40%;
+  }
+  .cardBio {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 860px) and (max-width: 1020px) {
+  .aboutPage {
+    margin: 0;
+  }
+  .aboutCard {
+    width: 90% !important;
+    display: flex;
+  }
+  .aboutPic {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+  .aboutPicture {
+    height: 230px;
+    width: 30%;
+  }
+  .cardBio {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 1020px) and (max-width: 1300px) {
+  .aboutPage {
+    margin: 0;
+  }
+  .aboutCard {
+    width: 70% !important;
+  }
+  .aboutPic {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+  .aboutPicture {
+    height: 200px;
+    width: 30%;
+  }
+  .cardBio {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1300px) and (max-width: 1500px) {
+  .aboutPage {
+    margin: 0;
+  }
+  .aboutCard {
+    width: 60% !important;
+  }
+  .aboutPic {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+  .aboutPicture {
+    height: 180px;
+    width: 25%;
+  }
+  .cardBio {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1500px) and (max-width: 1700px) {
+  .aboutPage {
+    margin: 0;
+  }
+  .aboutCard {
+    width: 60% !important;
+  }
+  .aboutPic {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+  .aboutPicture {
+    height: 180px;
+    width: 20%;
+  }
+  .cardBio {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .aboutPage {
+    margin: 0;
+  }
+  .aboutCard {
+    width: 60% !important;
+  }
+
+  .aboutPic {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+  .aboutPicture {
+    height: 220px;
+    width: 20%;
+  }
+  .cardBio {
+    width: 70%;
+  }
+}

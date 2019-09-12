@@ -1,0 +1,60 @@
+.projectCardList {
+  /* margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    margin-left: 6%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projectsBanner {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://image.ibb.co/mzRPqG/lightkeyboard.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 400px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: Raleway;
+  font-size: 1.2em;
+  margin-bottom: 2em;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.btn {
+  margin: 5px;
+}
+
+@media only screen /*Mobile Larger */ and (min-width: 640px) and (max-width: 900px) {
+  .buttonGroup {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+}
+
+@media only screen /*Mobile Larger */ and (min-width: 900px) {
+  .buttonGroup {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+}
