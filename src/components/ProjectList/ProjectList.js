@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./styles.css";
 import Project from "../Project";
 import * as selectedAction from "../../redux/modules/selected";
-// import Button from "material-ui/Button";
 import Button from '@material-ui/core/Button';
 import { connect } from "react-redux";
 import projectData from "./project-data";

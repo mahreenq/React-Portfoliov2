@@ -54,12 +54,12 @@ const Project = ({ project }) => {
 
             <CardActions style={style.buttons}>
               {project.git_url ? (
-                <a target="_blank" style={style.buttons} href={project.git_url}>
-                  <FontAwesome name=" fa-github" />{" "}
+                <a target="_blank" rel="noopener noreferrer" style={style.buttons} href={project.git_url}>
+                  <FontAwesome name=" fa-github" />
                 </a>
               ) : null}
               {project.url ? (
-                <a target="_blank" style={style.linkButton} href={project.url}>
+                <a target="_blank" rel="noopener noreferrer" style={style.linkButton} href={project.url}>
                   <FontAwesome name=" fa-mouse-pointer" />
                 </a>
               ) : null}
