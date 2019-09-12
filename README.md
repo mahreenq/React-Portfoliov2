@@ -1,4 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Personal Portfolio - React
+
+Portfolio web application showcasing projects. The app is coded using React.js. 
+
+<img src ="./src/assets/portfolio_showcase.png" width="80%"/>
+
 
 ## Available Scripts
 
